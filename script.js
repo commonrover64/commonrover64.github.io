@@ -27,7 +27,7 @@ function randomSakura() {
 }
 
 document.getElementById('konnichiwaTrigger').addEventListener('click', () => {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 10; i++) {
     setTimeout(() => spawnFlower(), i * 50);
   }
 });
