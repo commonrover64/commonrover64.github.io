@@ -123,6 +123,7 @@ h1 {
 }
 
 #konnichiwaTrigger {
+  color: var(--white);
   cursor: pointer;
   transition: transform 0.2s;
 }
