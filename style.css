@@ -129,6 +129,7 @@ h1 {
   pointer-events: none;
   animation: fall linear forwards;
   opacity: 0.8;
+  z-index: 100;
 }
 
 #konnichiwaTrigger {
