@@ -26,10 +26,13 @@ function randomSakura() {
   setTimeout(randomSakura, nextSpawn);
 }
 
-document.getElementById('konnichiwaTrigger').addEventListener('click', () => {
+function flowerBurst() {
   for (let i = 0; i < 10; i++) {
     setTimeout(() => spawnFlower(), i * 50);
   }
-});
+}
+
+document.getElementById('konnichiwaTrigger').addEventListener('click', flowerBurst);
 
 randomSakura();
+flowerBurst();
