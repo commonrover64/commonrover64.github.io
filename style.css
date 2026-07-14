@@ -86,7 +86,8 @@ h1 {
 .subtitle {
   font-size: 1.25rem;
   /* color: var(--gray); */
-  color:#7f849c;
+  /* color:#7f849c; */
+  color: var(--white);
   margin-bottom: 2rem;
   font-weight: 400;
 }
