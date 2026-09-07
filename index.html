@@ -1,53 +1,231 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siddhartha</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav>
-      <a href="#" class="logo">Sid</a>
-      <div class="nav-links">
-        <a href="https://github.com/commonrover64?tab=repositories">Work</a>
-        <a href="mailto:siddhartharampalsingh@gmail.com">Contact</a>
-      </div>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Siddhartha Rampal Singh, software developer and bassist."
+        />
+        <meta name="theme-color" content="#191a17" />
+        <title>Siddhartha Rampal Singh</title>
 
-    <main>
-      <section class="hero">
-        <div class="container">
-          <h1>Siddhartha</h1>
-          <p class="subtitle">FullStack Dev / Bassist</p>
-          <p class="description">
-            Hey i'm just a developer trying to build cool stuff on the web. When
-            I'm not coding, i'm probably playing my bass or learning Japanese
-            <span id="konnichiwaTrigger">こんにちは! ♡</span>
-            <br /><br />
-            Got idea for Project or Music ?? Hitt me up.
-          </p>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <a href="#top" class="logo" aria-label="Back to top">SID</a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-          <div class="links">
-            <a href="https://github.com/commonrover64" class="link">GitHub</a>
-            <a
-              href="https://www.linkedin.com/in/siddhartha-rampal-singh/"
-              class="link"
-              >LinkedIn</a
+        <main id="top">
+            <section class="hero" aria-labelledby="hero-title">
+                <div
+                    class="hero-media"
+                    role="img"
+                    aria-label="Fewa Lake and surrounding mountains"
+                ></div>
+                <div class="hero-shade" aria-hidden="true"></div>
+
+                <div class="hero-content">
+                    <h1>Siddhartha <span>Rampal Singh</span></h1>
+                    <p class="hero-description">
+                        I build things for the web, explore systems, and
+                        occasionally make noise.
+                    </p>
+                    <a href="#work" class="text-link"
+                        ><span>View my work</span></a
+                    >
+                </div>
+
+                <a href="#work" class="scroll-cue" aria-label="Scroll to work">
+                    <span>Scroll</span>
+                    <span class="scroll-line" aria-hidden="true"></span>
+                </a>
+            </section>
+
+            <section id="work" class="section work-section">
+                <div class="simple-heading">
+                    <p class="section-label">Work</p>
+                    <h2>Selected work.</h2>
+                </div>
+
+                <div class="projects">
+                    <a
+                        class="project"
+                        href="https://github.com/commonrover64/guardian"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span class="project-number">01</span>
+                        <div class="project-main">
+                            <div class="project-title">
+                                <h3>Guardian</h3>
+                            </div>
+                            <p>
+                                A lightweight Linux endpoint monitor focused on
+                                processes, network activity, and suspicious
+                                behaviour.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span><span>Linux</span
+                            ><span>Security</span>
+                        </div>
+                    </a>
+
+                    <a
+                        class="project"
+                        href="https://github.com/commonrover64/BandJam"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span class="project-number">02</span>
+                        <div class="project-main">
+                            <div class="project-title">
+                                <h3>BandJam</h3>
+                            </div>
+                            <p>
+                                A practice-room booking platform for musicians,
+                                with search, room management, and booking flows.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>React</span><span>Node</span
+                            ><span>MongoDB</span>
+                        </div>
+                    </a>
+
+                    <article class="project project-building">
+                        <span class="project-number">03</span>
+                        <div class="project-main">
+                            <div class="project-title">
+                                <h3>Loan Intelligence</h3>
+                            </div>
+                            <p>
+                                An agent-based document intelligence system for
+                                classifying loan files and extracting relevant
+                                information.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>LangGraph</span><span>AI</span
+                            ><span>Documents</span>
+                        </div>
+                    </article>
+                </div>
+
+                <a
+                    class="text-link work-more"
+                    href="https://github.com/commonrover64?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span>View more on GitHub</span>
+                </a>
+            </section>
+
+            <section id="about" class="section about-section">
+                <div class="simple-heading">
+                    <p class="section-label">About</p>
+                </div>
+
+                <div class="about-grid">
+                    <figure class="about-photo">
+                        <img
+                            src="/assets/pictures/IMG_1301.JPG"
+                            alt="Siddhartha holding a bass guitar"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </figure>
+
+                    <div class="about-content">
+                        <p class="about-title">Developer / Bassist</p>
+
+                        <div class="about-description">
+                            <p>
+                                Hey, I'm just a developer trying to build cool
+                                stuff on the web. When I'm not coding, I'm
+                                probably playing my bass or learning Japanese.
+                                こんにちは!
+                            </p>
+                        </div>
+
+                        <div class="about-contact">
+                            <div class="contact-item">
+                                <span>Email</span>
+                                <a href="mailto:siddhartharampalsingh@gmail.com"
+                                    >siddhartharampalsingh@gmail.com</a
+                                >
+                            </div>
+                            <div class="contact-item">
+                                <span>GitHub</span>
+                                <a
+                                    href="https://github.com/commonrover64"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >github.com/commonrover64</a
+                                >
+                            </div>
+                            <div class="contact-item">
+                                <span>LinkedIn</span>
+                                <a
+                                    href="https://www.linkedin.com/in/siddhartha-rampal-singh/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >LinkedIn</a
+                                >
+                            </div>
+                            <div class="contact-item">
+                                <span>CV</span>
+                                <a href="siddhartha_cv_latest.pdf" download
+                                    >Download CV</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <div
+                    class="contact-media"
+                    role="img"
+                    aria-label="Night sky through leaves"
+                ></div>
+                <div class="contact-shade" aria-hidden="true"></div>
+
+                <div class="contact-main section">
+                    <p class="section-label">Contact</p>
+                    <h2>Get in touch.</h2>
+                    <a
+                        class="email-link"
+                        href="mailto:siddhartharampalsingh@gmail.com"
+                    >
+                        <span>siddhartharampalsingh@gmail.com</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <span
+                >&copy; <span id="footer-year">2026</span> Siddhartha Rampal
+                Singh</span
             >
-            <a href="https://leetcode.com/u/CommonRoveR/" class="link"
-              >LeetCode</a
-            >
-            <a href="siddhartha_cv_latest.pdf" class="link" download>Download CV</a>
-          </div>
-        </div>
-      </section>
+        </footer>
 
-      <script src="script.js"></script>
-    </main>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>
