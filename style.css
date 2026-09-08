@@ -145,8 +145,9 @@ a {
         linear-gradient(
             180deg,
             rgba(23, 24, 21, 0.12) 0%,
-            rgba(23, 24, 21, 0.05) 48%,
-            rgba(23, 24, 21, 0.55) 100%
+            rgba(23, 24, 21, 0.05) 40%,
+            rgba(23, 24, 21, 0.6) 85%,
+            var(--bg-soft) 100%
         );
 }
 
@@ -174,6 +175,23 @@ a {
     font-size: 0.98rem;
     line-height: 1.75;
 }
+/* .projects {
+    display: grid;
+    gap: 1.25rem;
+}
+.project {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr) 13rem;
+    gap: 2rem;
+    padding: 2.2rem 2rem;
+    background: var(--bg-lighter);
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    transition:
+        background-color var(--ease),
+        border-color var(--ease),
+        transform var(--ease);
+} */
 .text-link {
     margin-top: 2rem;
     display: grid;
@@ -248,7 +266,12 @@ a {
     width: 100%;
     padding-left: var(--page-padding);
     padding-right: var(--page-padding);
-    background: var(--bg-soft);
+    background: linear-gradient(
+        180deg,
+        var(--bg-soft) 0%,
+        var(--bg-soft) 85%,
+        var(--bg) 100%
+    );
 }
 .work-section > * {
     width: min(var(--max-width), 100%);
@@ -590,6 +613,72 @@ a {
         flex-direction: column;
         gap: 0.5rem;
     }
+}
+
+/* hero entrance */
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(36px);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+@keyframes scroll-bob {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+}
+.hero-content h1,
+.hero-content .hero-description,
+.hero-content .text-link,
+.scroll-cue {
+    opacity: 0;
+    animation: rise-in 1100ms cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+.hero-content h1 {
+    animation-delay: 0.15s;
+}
+.hero-content .hero-description {
+    animation-delay: 0.38s;
+}
+.hero-content .text-link {
+    animation-delay: 0.58s;
+}
+.scroll-cue {
+    animation:
+        rise-in 1100ms cubic-bezier(0.19, 1, 0.22, 1) forwards 0.78s,
+        scroll-bob 2400ms ease-in-out infinite 1.9s;
+}
+
+/* scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    filter: blur(4px);
+    transition:
+        opacity 900ms cubic-bezier(0.19, 1, 0.22, 1),
+        transform 900ms cubic-bezier(0.19, 1, 0.22, 1),
+        filter 900ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+.projects .project:nth-child(2) {
+    transition-delay: 100ms;
+}
+.projects .project:nth-child(3) {
+    transition-delay: 200ms;
 }
 
 /* reduced motion */
