@@ -13,6 +13,8 @@
     --mono: "Geist Mono", monospace;
     --page-padding: clamp(1.25rem, 5vw, 5rem);
     --max-width: 1200px;
+    --font-jp: "Noto Sans JP", var(--sans);
+    --jp-ease: cubic-bezier(0.4, 0, 0.2, 1);
     --ease: 280ms ease;
 }
 
@@ -20,6 +22,51 @@
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+/* japanese hover swap */
+[data-ja] {
+    position: relative;
+}
+[data-ja] .jp-base {
+    display: inline-block;
+    transition:
+        opacity 600ms var(--jp-ease),
+        transform 600ms var(--jp-ease);
+}
+[data-ja]::after {
+    content: attr(data-ja);
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+        opacity 600ms var(--jp-ease),
+        transform 600ms var(--jp-ease);
+    font-family: var(--font-jp);
+    color: inherit;
+    pointer-events: none;
+    white-space: nowrap;
+}
+[data-ja]:hover .jp-base {
+    opacity: 0;
+    transform: translateY(-14px);
+}
+[data-ja]:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hero-description[data-ja]::after,
+.about-description p[data-ja]::after,
+.project-main p[data-ja]::after {
+    white-space: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-ja]::after,
+    [data-ja] .jp-base {
+        transition: none;
+    }
 }
 
 html {
@@ -164,7 +211,7 @@ a {
     line-height: 1.15;
     letter-spacing: 0.01em;
 }
-.hero h1 span {
+.hero h1 .surname {
     display: block;
     color: var(--accent);
 }
