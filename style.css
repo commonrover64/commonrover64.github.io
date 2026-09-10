@@ -14,7 +14,7 @@
     --page-padding: clamp(1.25rem, 5vw, 5rem);
     --max-width: 1200px;
     --font-jp: "Noto Sans JP", var(--sans);
-    --jp-ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --jp-ease: cubic-bezier(0.19, 1, 0.22, 1);
     --ease: 280ms ease;
 }
 
@@ -27,6 +27,7 @@
 /* japanese hover swap */
 [data-ja] {
     position: relative;
+    display: inline-block;
 }
 [data-ja] .jp-base {
     display: inline-block;
@@ -137,7 +138,7 @@ a {
     color: var(--text);
     transition: color var(--ease);
 }
-.site-nav a::after {
+.site-nav a::before {
     content: "";
     position: absolute;
     left: 0;
@@ -152,7 +153,7 @@ a {
 .site-nav a:hover {
     color: var(--accent);
 }
-.site-nav a:hover::after {
+.site-nav a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
 }
