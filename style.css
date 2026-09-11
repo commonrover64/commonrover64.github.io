@@ -27,6 +27,9 @@
 /* japanese hover swap */
 [data-ja] {
     position: relative;
+}
+a[data-ja],
+span[data-ja] {
     display: inline-block;
 }
 [data-ja] .jp-base {
